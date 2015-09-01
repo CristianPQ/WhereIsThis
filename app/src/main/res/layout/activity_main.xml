@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_blue_grey_800"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/welcome"
+        android:gravity="center"
+        android:textSize="40dp"
+        android:text="@string/app_name"
+        android:textColor="#ededed" />
+
+    <LinearLayout
+        android:layout_below="@id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/welcomelinearLayout">
+
+        <Button
+            android:background="@drawable/roundedbutton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/help"
+            android:text="@string/help"
+            android:onClick="HelpView"/>
+
+        <Button
+            android:background="@drawable/roundedbutton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/highscore"
+            android:text="@string/highscore"
+            android:onClick="RankingView"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:background="@drawable/roundedbutton"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/welcomelinearLayout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/play"
+        android:textSize="35dp"
+        android:text="@string/play"
+        android:onClick="chooseGameMode"/>
+
+    <LinearLayout
+        android:layout_below="@id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/hardness"
+        android:layout_marginTop="40dp">
+
+
+        <Button
+            android:background="@drawable/roundedbutton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/easy"
+            android:text="@string/easy"
+            android:onClick="easyGame"/>
+
+        <Button
+            android:background="@drawable/roundedbutton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/medium"
+            android:text="@string/medium"
+            android:onClick="mediumGame"/>
+
+        <Button
+            android:background="@drawable/roundedbutton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/hard"
+            android:text="@string/hard"
+            android:onClick="hardGame" />
+
+    </LinearLayout>
+    <Button
+        android:background="@drawable/roundedbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hardness"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="About"
+        android:text="@string/title_activity_about" />
+
+</RelativeLayout>
